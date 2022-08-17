@@ -7,7 +7,7 @@
  이 연구에서는 high-level feature에서 high-level semantic feature을 추출하여 사용할 수 있기 때문에 좀 더 의미있는 style transfer이 가능하다고 한다.
  ![image](https://user-images.githubusercontent.com/102507688/185020424-a3dfb0a1-a830-4cec-a1ab-8b9c1ca5f537.png)
 
-## 2.Deep image representations
+## 2. Deep image representations
   * base : normalised된 16개의 convolutional layers, 5개의 pooling layers로 구성된 VGG19 network를 baisis model로 사용, fully connected layer들을 사용하지 않았다.
   
   ### Content representation
@@ -62,10 +62,14 @@ $F^l : 생성된 image layer l feature map$
 
 $\alpha, \beta : content, style reconstruction's weighting factor$  
 *optimizer : L-BFGS
-### Result
+
+![image](https://user-images.githubusercontent.com/102507688/185040500-73c56268-395d-4d34-8189-b34c24f993c0.png)  
+*알파와 베타값을 통해 content, style 각각의 반영 정도를 조정할 수 있다.
+
+## 3. Result
   
 
 * content image, style image가 각각 존재하고, 생성할 이미지 x는 white noise 상태에서 content, style information을 합성하여 얻어낸다.
 * pretrained VGG net을 활용하고, 이때의 학습은 VGG net이 아니라 input image x가 backpropagation을 통해 값을 찾아가는 것을 말한다.  
-![image](https://user-images.githubusercontent.com/102507688/185040500-73c56268-395d-4d34-8189-b34c24f993c0.png)  
+  
 ![image](https://user-images.githubusercontent.com/102507688/185041839-c822c185-bd80-4c91-8c6e-f999fb5a67aa.png)

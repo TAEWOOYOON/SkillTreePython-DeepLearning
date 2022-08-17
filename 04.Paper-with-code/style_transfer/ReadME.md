@@ -11,13 +11,13 @@
   * base : normalised된 16개의 convolutional layers, 5개의 pooling layers로 구성된 VGG19 network를 baisis model로 사용, fully connected layer들을 사용하지 않았다.
   
   ### Content representation
-   $N_l : 한 layer의 filter 수(channel 수)$ 
-   $M_l : feature map의 내적$ 
+   $N_l : 한 layer의 filter 수(channel 수)$   
+   $M_l : feature map의 내적$  
    $F^l_{i,g} : F \in R^{N_lXM_l}$  
-   $p : 원본 이미지$
-   $x : 생성된 이미지$   
-   $P^l: 원본 이미지 layer l feature map $
-   $F^l : 생성된 이미지 layer l feature map$
+   $p : 원본 이미지$  
+   $x : 생성된 이미지$     
+   $P^l: 원본 이미지 layer l feature map $  
+   $F^l : 생성된 이미지 layer l feature map$  
  
  
  Content Loss : 
@@ -35,7 +35,7 @@
  이 때 활용하는 것이 Gramm matrix이다.
  
  $G^l \in R^{N_lXM_l}$
- \n
+ 
  $G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$
  
  
@@ -43,7 +43,6 @@
  원본 이미지의 Gram matrics와 생성된 이미지의 Gram matrics 간 mean-squared distance를 최소화 하도록 Loss를 구성한다.
  
 $a : style original image$
-\n
 $x : 생성된 image$
 $A^l : style original image layer l feature map$
 $F^l : 생성된 image layer l feature map$

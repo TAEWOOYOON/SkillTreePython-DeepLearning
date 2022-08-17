@@ -35,14 +35,15 @@
  이 때 활용하는 것이 Gramm matrix이다.
  
  $G^l \in R^{N_lXM_l}$
- 
+ \n
  $G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$
  
  
- * 이 때 G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.
+ * G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.
  원본 이미지의 Gram matrics와 생성된 이미지의 Gram matrics 간 mean-squared distance를 최소화 하도록 Loss를 구성한다.
  
 $a : style original image$
+\n
 $x : 생성된 image$
 $A^l : style original image layer l feature map$
 $F^l : 생성된 image layer l feature map$

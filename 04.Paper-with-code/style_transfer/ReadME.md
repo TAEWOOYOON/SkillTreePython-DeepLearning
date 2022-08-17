@@ -20,6 +20,5 @@
    $$F^l $$: 생성된 이미지 layer l feature map 
  
  
- - ![image](https://user-images.githubusercontent.com/102507688/185024974-a0c7c33a-ac98-4795-8e36-f874704d961e.png)
-
+ - Content Loss : ![image](https://user-images.githubusercontent.com/102507688/185025370-7d4d1b91-47ea-4185-830b-a19f23f0683f.png)
   

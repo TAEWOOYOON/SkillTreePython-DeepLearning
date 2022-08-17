@@ -14,10 +14,12 @@
   - $$N_l : 한 layer의 filter 수(channel 수) $$
   - $$M_l : feature map의 내적 $$
   - $$F^l_{i,g} : F \in R^{N_lXM_l} $$ 
-  - $$p : 원본 이미지 $$
-  - $$ x : 생성된 이미지 $$  
-  - $$ P^l : 원본 이미지 layer l feature map $$ 
-  - $$ F^l : 생성된 이미지 layer l feature map $$
+  - $$p : 원본 이미지$$
+  - $$x : 생성된 이미지 $$  
+  - $$P^l : 원본 이미지 layer l feature map $$ 
+  - $$F^l : 생성된 이미지 layer l feature map $$
+ 
+ 
  ![image](https://user-images.githubusercontent.com/102507688/185024974-a0c7c33a-ac98-4795-8e36-f874704d961e.png)
 
   

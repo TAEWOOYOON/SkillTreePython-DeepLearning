@@ -11,13 +11,13 @@
   * base : normalised된 16개의 convolutional layers, 5개의 pooling layers로 구성된 VGG19 network를 baisis model로 사용, fully connected layer들을 사용하지 않았다.
   
   ### Content representation
-   $$N_l : 한 layer의 filter 수(channel 수)$$ 
-   $$M_l : feature map의 내적$$ 
-   $$F^l_{i,g} : F \in R^{N_lXM_l}$$  
-   $$p : 원본 이미지$$
-   $$x : 생성된 이미지$$   
-   $$P^l: 원본 이미지 layer l feature map $$
-   $$F^l : 생성된 이미지 layer l feature map$$ 
+   $N_l : 한 layer의 filter 수(channel 수)$ 
+   $M_l : feature map의 내적$ 
+   $F^l_{i,g} : F \in R^{N_lXM_l}$  
+   $p : 원본 이미지$
+   $x : 생성된 이미지$   
+   $P^l: 원본 이미지 layer l feature map $
+   $F^l : 생성된 이미지 layer l feature map$
  
  
  Content Loss : 
@@ -34,9 +34,9 @@
  * input 이미지의 style representation을 얻으려면, texture information을 잡아내는 feature space를 활용해야한다.
  이 때 활용하는 것이 Gramm matrix이다.
  
- $$G^l \in R^{N_lXM_l}$$ 
+ $G^l \in R^{N_lXM_l}$
  
- $$G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$$
+ $G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$
  
  
  * 이 때 G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.

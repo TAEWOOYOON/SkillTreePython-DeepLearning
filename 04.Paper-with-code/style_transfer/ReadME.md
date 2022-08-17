@@ -70,6 +70,13 @@ $\alpha, \beta : content, style reconstruction's weighting factor$
   
 
 * content image, style image가 각각 존재하고, 생성할 이미지 x는 white noise 상태에서 content, style information을 합성하여 얻어낸다.
-* pretrained VGG net을 활용하고, 이때의 학습은 VGG net이 아니라 input image x가 backpropagation을 통해 값을 찾아가는 것을 말한다.  
+* pretrained VGG net을 활용하고, 이때의 학습은 VGG net이 아니라 x가 backpropagation을 통해 값을 찾아가는 것을 말한다.  
+* Content image example
+![image](https://user-images.githubusercontent.com/102507688/185042655-fcf83688-df7a-4c10-bf19-3c00a7eb077f.png)  
+
+* Style image example
+![image](https://user-images.githubusercontent.com/102507688/185042700-74cbffdd-8363-4666-90a7-48cc66aa5235.png)  
+
+* Combined image example
   
 ![image](https://user-images.githubusercontent.com/102507688/185041839-c822c185-bd80-4c91-8c6e-f999fb5a67aa.png)

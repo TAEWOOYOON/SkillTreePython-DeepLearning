@@ -1,1 +1,23 @@
 # Style transfer
+
+## 1. Introduction
+ paper : https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf
+ 논문에서는 어떤 이미지의 style을 다른 이미지로 전달하는것을 textuer transfer 문제라고 한다.
+ 기존의 texture transfer에서도 가능했지만, 이는 low-level feature만을 사용해서 문제점이 있었다.
+ 이 연구에서는 high-level feature에서 high-level semantic feature을 추출하여 사용할 수 있기 때문에 좀 더 의미있는 style transfer이 가능하다고 한다.
+ ![image](https://user-images.githubusercontent.com/102507688/185020424-a3dfb0a1-a830-4cec-a1ab-8b9c1ca5f537.png)
+
+## 2.Deep image representations
+  * base : normalised된 16개의 convolutional layers, 5개의 pooling layers로 구성된 VGG19 network를 baisis model로 사용, fully connected layer들을 사용하지 않았다.
+  
+  * Content representation
+  - $$N_l : 한 layer의 filter 수(channel 수) $$
+  - $$M_l : feature map의 내적 $$
+  - $$F^l_{i,g} : F \in R^{N_lXM_l} $$ 
+  - $$p : 원본 이미지 $$
+  - $$ x : 생성된 이미지 $$  
+  - $$ P^l : 원본 이미지 layer l feature map $$ 
+  - $$ F^l : 생성된 이미지 layer l feature map $$
+ ![image](https://user-images.githubusercontent.com/102507688/185024974-a0c7c33a-ac98-4795-8e36-f874704d961e.png)
+
+  

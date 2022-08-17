@@ -22,7 +22,7 @@
  
  Content Loss : 
  
- ![image](https://user-images.githubusercontent.com/102507688/185025370-7d4d1b91-47ea-4185-830b-a19f23f0683f.png)
+ ![image](https://user-images.githubusercontent.com/102507688/185025370-7d4d1b91-47ea-4185-830b-a19f23f0683f.png)  
  
  
  ![image](https://user-images.githubusercontent.com/102507688/185032861-b5f1ee9b-5f13-4ea6-b130-6598f049b9c1.png)
@@ -34,21 +34,34 @@
  * input 이미지의 style representation을 얻으려면, texture information을 잡아내는 feature space를 활용해야한다.
  이 때 활용하는 것이 Gramm matrix이다.
  
- $G^l \in R^{N_lXM_l}$
- 
- $G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$
+ $G^l \in R^{N_lXM_l}$  
+ $G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$  
  
  
  * G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.
  원본 이미지의 Gram matrics와 생성된 이미지의 Gram matrics 간 mean-squared distance를 최소화 하도록 Loss를 구성한다.
  
-$a : style original image$
-$x : 생성된 image$
-$A^l : style original image layer l feature map$
-$F^l : 생성된 image layer l feature map$
+$a : style original image$  
+$x : 생성된 image$  
+$A^l : style original image layer l feature map$  
+$F^l : 생성된 image layer l feature map$  
 
 ![image](https://user-images.githubusercontent.com/102507688/185036722-2254f37f-1a7f-4de8-ae54-0180f0266af3.png)
 
 
-![image](https://user-images.githubusercontent.com/102507688/185036763-0e56b1c0-5892-489f-a057-dca43e15273c.png)
+![image](https://user-images.githubusercontent.com/102507688/185036763-0e56b1c0-5892-489f-a057-dca43e15273c.png)  
+
+
+![image](https://user-images.githubusercontent.com/102507688/185040342-b20763a3-3d21-4ffc-bae2-2a2ed8cdd2d4.png)  
+
+
+* 위 2번째 수식의 w는 layer 별 weighting factor이다.
+* 결과적으로 style original image의 정보를 가진 a와 content original image의 정보를 가진 p를 합성하여 input image x를 얻고자 함이다.  
+
+![image](https://user-images.githubusercontent.com/102507688/185041133-820eca2b-5c7b-459a-b33d-d89984c00e16.png)  
+
+$\alpha, \beta : content, style reconstruction's weighting factor$  
+*optimizer : L-BFGS
+### Result
+![image](https://user-images.githubusercontent.com/102507688/185040500-73c56268-395d-4d34-8189-b34c24f993c0.png)  
 

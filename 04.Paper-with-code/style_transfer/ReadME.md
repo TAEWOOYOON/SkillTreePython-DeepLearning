@@ -42,10 +42,10 @@
  * 이 때 G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.
  원본 이미지의 Gram matrics와 생성된 이미지의 Gram matrics 간 mean-squared distance를 최소화 하도록 Loss를 구성한다.
  
-$$a : style original image$$
-$$x : 생성된 image$$
-$$A^l : style original image layer l feature map$$
-$$F^l : 생성된 image layer l feature map$$
+$a : style original image$
+$x : 생성된 image$
+$A^l : style original image layer l feature map$
+$F^l : 생성된 image layer l feature map$
 
 ![image](https://user-images.githubusercontent.com/102507688/185036722-2254f37f-1a7f-4de8-ae54-0180f0266af3.png)
 

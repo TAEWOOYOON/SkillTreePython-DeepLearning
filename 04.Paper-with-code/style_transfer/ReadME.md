@@ -10,7 +10,7 @@
 ## 2.Deep image representations
   * base : normalised된 16개의 convolutional layers, 5개의 pooling layers로 구성된 VGG19 network를 baisis model로 사용, fully connected layer들을 사용하지 않았다.
   
-  * Content representation
+  ### Content representation
    $$N_l : 한 layer의 filter 수(channel 수)$$ 
    $$M_l : feature map의 내적$$ 
    $$F^l_{i,g} : F \in R^{N_lXM_l}$$  
@@ -30,8 +30,8 @@
  network의 higher layer는 이미지의 물체나 배치에 대한 high-level content를 잡아낸다. 그러나 정확한 픽셀값을 기대하기는 어렵다.
  이 연구에서는 higher layer의 feature map을 content representation에 활용한다.
  
- * Style representation
- input 이미지의 style representation을 얻으려면, texture information을 잡아내는 feature space를 활용해야한다.
+ ### Style representation
+ * input 이미지의 style representation을 얻으려면, texture information을 잡아내는 feature space를 활용해야한다.
  이 때 활용하는 것이 Gramm matrix이다.
  
  $$G^l \in R^{N_lXM_l}$$ 
@@ -39,7 +39,7 @@
  $$G^l_{ij} = \sigma F^l_{ik}F^l_{jk}$$
  
  
- 이 때 G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.
+ * 이 때 G는 layer l에서 vectorized feature map i, j 의 내적을 한 것이다.
  원본 이미지의 Gram matrics와 생성된 이미지의 Gram matrics 간 mean-squared distance를 최소화 하도록 Loss를 구성한다.
  
 $$a : style original image$$

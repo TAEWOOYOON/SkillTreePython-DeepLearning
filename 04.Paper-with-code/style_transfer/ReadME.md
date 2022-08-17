@@ -23,5 +23,11 @@
  - Content Loss : 
  
  ![image](https://user-images.githubusercontent.com/102507688/185025370-7d4d1b91-47ea-4185-830b-a19f23f0683f.png)
+ 
+ 
  ![image](https://user-images.githubusercontent.com/102507688/185032861-b5f1ee9b-5f13-4ea6-b130-6598f049b9c1.png)
 
+ - network의 higher layer는 이미지의 물체나 배치에 대한 high-level content를 잡아낸다. 그러나 정확한 픽셀값을 기대하기는 어렵다.
+ 이 연구에서는 higher layer의 feature map을 content representation에 활용한다.
+ 
+ * Style representation

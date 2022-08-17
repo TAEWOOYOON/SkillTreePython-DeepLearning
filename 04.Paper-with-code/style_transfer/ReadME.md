@@ -23,4 +23,5 @@
  - Content Loss : 
  
  ![image](https://user-images.githubusercontent.com/102507688/185025370-7d4d1b91-47ea-4185-830b-a19f23f0683f.png)
-  
+ ![image](https://user-images.githubusercontent.com/102507688/185032861-b5f1ee9b-5f13-4ea6-b130-6598f049b9c1.png)
+
